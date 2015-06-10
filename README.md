@@ -4,6 +4,13 @@ Dockerfile for based service
 This is the Dockerfile which enables building the base Docker image
 to be used by php services.
 
+
+Building
+--------------------
+
+  $ docker build .
+
+
 php version (php -v)
 ---------------------
     
