@@ -1,4 +1,4 @@
-Dockerfile for based service
+Dockerfile for PHP based services
 ---------------------
 
 This is the Dockerfile which enables building the base Docker image
