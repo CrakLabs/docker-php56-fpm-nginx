@@ -22,12 +22,12 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 EXPOSE 80
 EXPOSE 443
 
-ADD ./docker/conf.d /etc/nginx/conf.d
-ADD ./docker/nginx.conf /etc/nginx/nginx.conf
-ADD ./docker/php.ini /etc/php.ini
-ADD ./docker/php-fpm.conf /etc/php-fpm.conf
-ADD ./docker/php-fpm.d /etc/php-fpm.d
-ADD ./docker/supervisord.conf /etc/supervisord.conf
+COPY ./docker/conf.d /etc/nginx/conf.d
+COPY ./docker/nginx.conf /etc/nginx/nginx.conf
+COPY ./docker/php.ini /etc/php.ini
+COPY ./docker/php-fpm.conf /etc/php-fpm.conf
+COPY ./docker/php-fpm.d /etc/php-fpm.d
+COPY ./docker/supervisord.conf /etc/supervisord.conf
 
 # Volumes
 VOLUME /var/log
