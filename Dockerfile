@@ -10,7 +10,7 @@ RUN yum -y install epel-release yum-utils && \
     yum -y update && \
     yum -y install php-fpm php-mysql php-mcrypt php-curl php-cli php-gd php-pgsql php-pdo \
            php-common php-json php-pecl-redis php-pecl-memcache nginx python-pip \
-           vim telnet php-mbstring && \
+           vim telnet git php-mbstring && \
     yum clean all
 
 # Supervisor config
