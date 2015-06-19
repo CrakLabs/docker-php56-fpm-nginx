@@ -10,7 +10,7 @@ RUN yum -y install epel-release yum-utils && \
     yum -y update && \
     yum -y install php-fpm php-mysql php-mcrypt php-curl php-cli php-gd php-pgsql php-pdo \
            php-common php-json php-pecl-redis php-pecl-memcache nginx python-pip \
-           vim telnet git php-mbstring && \
+           vim telnet git php-mbstring php-pecl-xdebug && \
     yum clean all
 
 # Supervisor config
@@ -27,6 +27,7 @@ COPY ./docker/nginx.conf /etc/nginx/nginx.conf
 COPY ./docker/php.ini /etc/php.ini
 COPY ./docker/php-fpm.conf /etc/php-fpm.conf
 COPY ./docker/php-fpm.d /etc/php-fpm.d
+COPY ./docker/php.d/15-xdebug.ini /etc/php.d/15-xdebug.ini
 COPY ./docker/supervisord.conf /etc/supervisord.conf
 
 # Volumes
